@@ -11,15 +11,17 @@
     <div id="main" role="main">
       <div class="element custom">
         <div class="element-header">
-          <input id="search" type="text" name="s" value="" placeholder="search" autocomplete="off">
           <h2>Contacts</h2>
+          <input id="search" type="text" name="s" value="" placeholder="Search" autocomplete="off">
         </div>
         <div class="element-content">
 
           <ul class="list">
             {% for row in rows %}
             <li id="index-A" data-group="work">
-              <a href="">{{ row.name_first }} {{ row.name_last }}</a>
+              <a href="">{{ row.name_first }} {{ row.name_last }}
+                <span>{{ row.phone_number }}</span>
+              </a>
             </li>
             {% else %}
             <li>This would display if the 'rows' collection were empty</li>

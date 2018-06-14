@@ -47,9 +47,10 @@ body {
     background: #4173b1 /*url(img/bg-header.jpg)*/;
     border: 1px solid #37598a;
     box-shadow: 0 1px 0 rgba(255,255,255,0.3) inset;
-    height: 54px;
+    /*height: 54px;*/
     padding: 16px; 
     position: relative;
+    text-align: center;
     z-index: 2;
 
     -webkit-border-top-left-radius: 5px;
@@ -64,32 +65,33 @@ body {
     font-weight: bold;
     font-size: 18px;
     text-shadow: 0 1px 0 #37598a;
-    position: absolute;
+    /*position: absolute;*/
+    padding-bottom: 5px;
     margin: 0;
   }
   .element .element-header input {
-    background: #fff /*url(img/glass.png)*/ no-repeat 6px center;
+    background: #fff /*url(img/glass.png) no-repeat 6px center*/;
     border: 0;
     border-bottom: 1px solid #37598a;
     border-radius: 80px;
-    float: right;
+    /*float: right;*/
 
     margin: 0;
-    width: 0;
+    width: 75%;
     padding: 0 11px;
     height: 22px;
 
     color: #fff;
     font-size: 11px;
     line-height: 22px;
-    text-indent: 300px;
+    /*text-indent: 300px;*/
   }
   .element .element-header input:focus + * { display: none; }
   .element .element-header input:focus {
     color: #858585;
-    text-align: left;
-    text-indent: 0;
-    padding: 0 11px 0 22px;
+    /*text-align: left;*/
+    /*text-indent: 0;*/
+    /*padding: 0 11px 0 22px;*/
     width: 100%;
   }
 
