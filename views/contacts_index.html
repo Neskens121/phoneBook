@@ -1,11 +1,62 @@
 <!doctype HTML>
 <html>
-  <head><title>PhoneBook</title></head>
+  <head>
+    <title>PhoneBook</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+ 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+  </head>
   <body>
-    {% for row in rows %}
-    <div>{{ row.name_first }}: {{ row.name_last }}</div>
-    {% else %}
-    <div>This would display if the 'rows' collection were empty</div>
-    {% endfor %}
+    <div id="main" role="main">
+      <div class="element custom">
+        <div class="element-header">
+          <input id="search" type="text" name="s" value="" placeholder="search" autocomplete="off">
+          <h2>Contacts</h2>
+        </div>
+        <div class="element-content">
+
+          <ul class="list">
+            {% for row in rows %}
+            <li id="index-A" data-group="work">
+              <a href="">{{ row.name_first }} {{ row.name_last }}</a>
+            </li>
+            {% else %}
+            <li>This would display if the 'rows' collection were empty</li>
+            {% endfor %}
+          </ul>
+          <div class="element-sidebar">
+            <a href="#index-#">#</a>
+            <a href="#index-A">A</a>
+            <a href="#index-B">B</a>
+            <a href="#index-C">C</a>
+            <a href="#index-D">D</a>
+            <a href="#index-E">E</a>
+            <a href="#index-F">F</a>
+            <a href="#index-G">G</a>
+            <a href="#index-H">H</a>
+            <a href="#index-I">I</a>
+            <a href="#index-J">J</a>
+            <a href="#index-K">K</a>
+            <a href="#index-L">L</a>
+            <a href="#index-M">M</a>
+            <a href="#index-N">N</a>
+            <a href="#index-O">O</a>
+            <a href="#index-P">P</a>
+            <a href="#index-Q">Q</a>
+            <a href="#index-R">R</a>
+            <a href="#index-S">S</a>
+            <a href="#index-T">T</a>
+            <a href="#index-U">U</a>
+            <a href="#index-V">V</a>
+            <a href="#index-W">W</a>
+            <a href="#index-X">X</a>
+            <a href="#index-Y">Y</a>
+            <a href="#index-Z">Z</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/script.js" ></script>
   </body>
 </html>
