@@ -1,0 +1,15 @@
+{
+    "name": "phoneBook",
+    "version": "0.1.0",
+    "description": "phoneBook",
+    "main": "app.js",
+    "dependencies": {
+        "body-parser": "~1.14.2",
+        "consolidate": "~0.13.1",
+        "express": "~4.13.3",
+        "mysql": "^2.5.4",
+        "nunjucks": "~2.2.0"
+    },
+    "author": "Nenad Bojkovic",
+    "license": "0BSD"
+}

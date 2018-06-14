@@ -1,0 +1,11 @@
+<!doctype HTML>
+<html>
+  <head><title>PhoneBook</title></head>
+  <body>
+    {% for row in rows %}
+    <div>{{ row.name_first }}: {{ row.name_last }}</div>
+    {% else %}
+    <div>This would display if the 'rows' collection were empty</div>
+    {% endfor %}
+  </body>
+</html>
