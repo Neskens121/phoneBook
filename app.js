@@ -10,7 +10,7 @@ var express = require('express'),
     	host     : 'localhost',
     	user     : 'root',
     	password : '123456',
-    	database : 'phonebook'
+    	database : 'phoneBook'
     });
 
 app.engine('html', engines.nunjucks);
