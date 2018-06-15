@@ -67,7 +67,7 @@ function errorHandler(err, req, res, next) {
     
     app.use(errorHandler);
     
-    var server = app.listen(3000, function() {
+    var server = app.listen(80, function() {
         var port = server.address().port;
         console.log('Express server listening on port %s.', port);
     });
