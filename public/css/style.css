@@ -20,6 +20,9 @@ body {
   /*background-image: url(img/bg.jpg);*/
   width: 650px;
   height: 550px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   position: relative;
   padding-top: 50px;
 }
@@ -192,5 +195,39 @@ body {
     font-size: 12px;
     font-weight: normal;
     text-align: center;
+  }
+  
+  #icon {
+    /*padding-bottom: 15px;*/
+  }
+
+  #contact-info, #contact-actions {
+     text-align: center;
+    /*padding-bottom: 15px;*/
+  }
+
+  #contact-actions i {
+    padding: 10px;
+    /*padding-bottom: 15px;*/
+  }
+  
+
+  #contact-actions a {
+    text-decoration: none;
+    color: rgb(65, 115, 177);
+    /*padding-bottom: 15px;*/
+  }
+
+  .circle {
+    height: 75px;
+    width: 75px;
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(65, 115, 177);
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 75px;
+    letter-spacing: 1.15px;
   }
 ​

@@ -36,14 +36,21 @@ function errorHandler(err, req, res, next) {
 				if(err){
 					console.log('query problems');	
 				} else {
-					console.log(rows);
-					var test = {
-						name_first: 'Dragane',
-						name_last: 'Moj'
-					}
-					res.render('contacts_index', {rows: rows, test: test});
+					res.render('contacts_index', {rows: rows});
 				}
 			});
+		});
+
+		app.get('/contactinfo/:id', function(req, res, next) {
+			console.log(req.params);
+			connection.query("SELECT * FROM contacts WHERE id = " +  req.params.id, function(err, rows, fields){
+				if(err){
+					console.log('query problems');	
+				} else {
+					res.render('contact_info', {contact: rows[0]});
+				}
+			});
+			//res.send(req.params.id);
 		});
 
 		/*app.post('/add_movie', function(req, res, next) {
@@ -67,7 +74,7 @@ function errorHandler(err, req, res, next) {
     
     app.use(errorHandler);
     
-    var server = app.listen(80, function() {
+    var server = app.listen(3000, function() {
         var port = server.address().port;
         console.log('Express server listening on port %s.', port);
     });
