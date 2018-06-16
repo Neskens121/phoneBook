@@ -15,7 +15,7 @@
           <div class="header-wrapper cf">
             <span class="block">My Contacts</span>
             <span class="block block-right">
-              <a href="/">
+              <a href="/addcontact">
                 <i class="fa fa-plus-circle fa-2x" title="Add New Contact"></i>
               </a>
             </span>
@@ -31,11 +31,12 @@
                 <span>{{ row.phone_number }}</span>
               </a>
             </li>
-            {% else %}
-            <li>This would display if the 'rows' collection were empty</li>
             {% endfor %}
+            <li id="nocontacts">
+              <a href="">No Contacts</a>
+            </li>
           </ul>
-          <div class="element-sidebar">
+          <!--<div class="element-sidebar">
             <a href="#index-#">#</a>
             <a href="#index-A">A</a>
             <a href="#index-B">B</a>
@@ -63,7 +64,7 @@
             <a href="#index-X">X</a>
             <a href="#index-Y">Y</a>
             <a href="#index-Z">Z</a>
-          </div>
+          </div>-->
         </div>
       </div>
     </div>

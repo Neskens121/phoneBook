@@ -4,9 +4,8 @@
     <title>PhoneBook</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/msc-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    
   </head>
   <body>
     <div id="main" role="main">
@@ -24,28 +23,29 @@
           <a href="/">
             <i class="fa fa-address-book fa-2x" title="My Contacts" aria-hidden="true"></i>
           </a>
-          <a href="">
-            <i class="fa fa-trash fa-2x" title="Delete Contact" aria-hidden="true"></i>
+          <a id="deleteLink" href="/deletecontact/{{ contact.id }}">
+            <i id="deleteBtn" class="fa fa-trash fa-2x" title="Delete Contact" aria-hidden="true"></i>
           </a>
         </div>
-        <!--<div class="element-content">
-
-          <ul class="list">
-            {% for row in contact %}
-            <li id="index-A" data-group="work">
-              <a href="/contactinfo/{{row.id}}">{{ row.name_first }} {{ row.name_last }}
-                <span>{{ row.phone_number }}</span>
-              </a>
-            </li>
-            {% else %}
-            <li>This would display if the 'rows' collection were empty</li>
-            {% endfor %}
-            
-          </ul>
-
-        </div>-->
       </div>
-    </div>
+    </div>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="/js/script.js" ></script>
+    <script src="/js/msc-script.js"></script>
+    <script type="text/javascript">
+      var deleteBtn = document.getElementById('deleteBtn');
+      deleteBtn.addEventListener('click', function(event){
+        event.preventDefault();
+        mscConfirm({
+          title: 'License',
+          dismissOverlay: true,   // default: false, closes dialog when clicked on overlay.
+          onOk: function() {
+            document.getElementById('deleteLink').click();
+          },
+          onCancel: function() {
+          }
+        });
+      });
+    </script>
   </body>
 </html>

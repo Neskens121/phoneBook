@@ -41,14 +41,14 @@
             return text.replace(regexp.provider, '').toLowerCase().indexOf(term) == -1;
             //return text.replace(regexp.email, '').toLowerCase().indexOf(term) == -1;
           }).hide();
-          console.log($('ul > :visible').length);
+          $('ul > :visible').length == 0 ? $('#nocontacts').show() :  $('#nocontacts').hide();
         };
     input.on('keyup select', filter);
     //console.log(this);
     return this;
   };
-  $('#search').liveSearch($('.list'));
+  //$('#search').liveSearch($('.list'));
 
-  //$('#search').liveSearch($('.list'), ':last-child');
+  $('#search').liveSearch($('.list'), ':last-child');
 
 })(jQuery);
