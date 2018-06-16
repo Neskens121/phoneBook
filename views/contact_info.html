@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   </head>
   <body>
+    <div class="arrow-right"></div>
+    <div class="git-icon">
+      <a href="https://github.com/Neskens121/phoneBook"></a>
+    </div>
     <div id="main" role="main">
       <div class="element custom">
         <div class="element-header">
@@ -28,7 +32,8 @@
           </a>
         </div>
       </div>
-    </div>    
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="/js/script.js" ></script>
     <script src="/js/msc-script.js"></script>
@@ -37,8 +42,8 @@
       deleteBtn.addEventListener('click', function(event){
         event.preventDefault();
         mscConfirm({
-          title: 'License',
-          dismissOverlay: true,   // default: false, closes dialog when clicked on overlay.
+          title: 'Delete?',
+          dismissOverlay: true, 
           onOk: function() {
             document.getElementById('deleteLink').click();
           },
