@@ -17,15 +17,6 @@
                 found = term.match(regexp.provider);
             textArr = text.split('\n');
             text = textArr[0];
-            console.log(text.replace(regexp.phoneNumber, '').toLowerCase());
-                //found = regexp.provider.test(term);            
-
-            //console.log(term);
-            console.log(text);
-            console.log(textArr);
-            
-            console.log(found);
-
             if (found) {
               console.log('found');
               if (text.indexOf('@' + found[1]) != -1 && !open) {
@@ -34,15 +25,11 @@
                 if (open && text.indexOf('@' + found[1]) != -1) return text.replace(regexp.email, '').toLowerCase().indexOf(open) == -1;
               }
             } else {console.log('not found');}
-            console.log(text.replace(regexp.provider, ''));
-            console.log(text.replace(regexp.provider, '').toLowerCase().indexOf(term));
             return text.replace(regexp.provider, '').toLowerCase().indexOf(term) == -1;
-            //return text.replace(regexp.email, '').toLowerCase().indexOf(term) == -1;
           }).hide();
           $('ul > :visible').length == 0 ? $('#nocontacts').show() :  $('#nocontacts').hide();
         };
     input.on('keyup select', filter);
-    //console.log(this);
     return this;
   };
   //$('#search').liveSearch($('.list'));
