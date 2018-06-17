@@ -64,7 +64,7 @@ connection.connect(function(err, db) {
 					if(err){
 						console.log('query problems');	
 					} else {
-						res.render('contacts_index', {rows: rows});
+						res.redirect('/');
 					}
 				});
 			}
@@ -83,7 +83,7 @@ connection.connect(function(err, db) {
 					if(err){
 						console.log('query problems');	
 					} else {
-						res.render('contacts_index', {rows: rows});
+						res.redirect('/');
 					}
 				});
 			}
