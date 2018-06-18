@@ -4,7 +4,7 @@
   $.fn.liveSearch = function(list, exclude) {
     var input = $('input'),
         regexp = {
-          provider: /[a-zA-Z0-9\.\-\_]+/i,
+          provider: /^[a-zA-Z0-9\.\-\_]+[\s]/i,
           email: /\@([a-zA-z0-9\-\_\.]+)/i,
           phoneNumber: /^(\+381|0)?(\s|-)?6(([0-6]|[8-9])\d{6,8}|(77|78)\d{7}){1}$/ig
         },

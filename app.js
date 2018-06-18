@@ -29,7 +29,7 @@ connection.connect(function(err, db) {
 	console.log("Successfully connected to MySQL.");
 
 	app.get('/', function(req, res, next) {
-		connection.query("SELECT * FROM contacts ORDER BY name_first, name_first", function(err, rows, fields){
+		connection.query("SELECT * FROM contacts ORDER BY name_last, name_first", function(err, rows, fields){
 			if(err){
 				console.log('query problems');	
 			} else {
@@ -60,7 +60,7 @@ connection.connect(function(err, db) {
 			if(err){
 				console.log('query problems');	
 			} else {
-				connection.query("SELECT * FROM contacts ORDER BY name_first, name_first", function(err, rows, fields){
+				connection.query("SELECT * FROM contacts ORDER BY name_last, name_first", function(err, rows, fields){
 					if(err){
 						console.log('query problems');	
 					} else {
